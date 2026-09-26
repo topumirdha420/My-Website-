@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Topu Earbuds Store</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#050505;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#0b0b0b;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#00e5ff;
+}
+
+.cart{
+    font-size:24px;
+}
+
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:50px 20px 40px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #123c44 0%,
+        #071013 40%,
+        #050505 75%
+    );
+}
+
+.hero h1{
+    font-size:40px;
+    line-height:1.2;
+}
+
+.hero h1 span{
+    color:#00e5ff;
+}
+
+.hero p{
+    margin-top:15px;
+    color:#aaa;
+    line-height:1.6;
+}
+
+.offer{
+    display:inline-block;
+    margin-top:22px;
+    padding:10px 20px;
+
+    background:#00e5ff;
+    color:#000;
+
+    border-radius:30px;
+    font-weight:bold;
+}
+
+
+/* PRODUCT */
+
+.product{
+    margin:25px 15px;
+    padding:25px 20px;
+
+    background:#111;
+    border:1px solid #292929;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 35px rgba(0,229,255,.08);
+}
+
+
+/* PRODUCT IMAGE */
+
+.product-image{
+    height:240px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(
+        circle,
+        #173e44,
+        #101010 65%
+    );
+
+    border-radius:18px;
+
+    margin-bottom:22px;
+}
+
+.earbuds{
+    font-size:120px;
+
+    filter:
+    drop-shadow(0 0 15px #00e5ff)
+    drop-shadow(0 0 30px rgba(0,229,255,.4));
+
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+
+/* PRODUCT INFO */
+
+.product h2{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.rating{
+    color:#ffd000;
+    font-size:17px;
+    margin-bottom:15px;
+}
+
+.description{
+    color:#999;
+    line-height:1.6;
+}
+
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+
+    margin:20px 0;
+}
+
+.feature{
+    padding:15px 8px;
+
+    background:#181818;
+    border-radius:12px;
+}
+
+.feature strong{
+    display:block;
+    color:#00e5ff;
+    margin-bottom:5px;
+}
+
+.feature small{
+    color:#888;
+}
+
+
+/* PRICE */
+
+.price{
+    margin:20px 0;
+}
+
+.old-price{
+    color:#777;
+    text-decoration:line-through;
+    margin-right:8px;
+}
+
+.new-price{
+    color:#00e5ff;
+    font-size:30px;
+    font-weight:bold;
+}
+
+
+/* BUTTON */
+
+.buy-button{
+    width:100%;
+    padding:16px;
+
+    border:none;
+    border-radius:13px;
+
+    background:#00e5ff;
+    color:#000;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.buy-button:active{
+    transform:scale(.97);
+}
+
+
+/* WHY US */
+
+.why{
+    padding:35px 20px;
+    background:#0d0d0d;
+}
+
+.why h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.reason{
+    text-align:center;
+    margin:22px 0;
+}
+
+.reason-icon{
+    font-size:35px;
+}
+
+.reason h3{
+    margin:8px 0;
+}
+
+.reason p{
+    color:#888;
+    line-height:1.5;
+}
+
+
+/* CONTACT */
+
+.contact{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.contact p{
+    color:#999;
+    margin:12px 0 22px;
+}
+
+.whatsapp{
+    width:100%;
+    padding:15px;
+
+    border:none;
+    border-radius:13px;
+
+    background:#25D366;
+    color:white;
+
+    font-size:17px;
+    font-weight:bold;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:20px;
+    text-align:center;
+
+    background:#020202;
+    color:#666;
+
+    font-size:13px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+🎧 Topu <span>Earbuds</span>
+</div>
+
+<div class="cart">
+🛒
+</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+Wireless <span>Earbuds</span>
+</h1>
+
+<p>
+Premium sound.
+<br>
+Powerful bass. Comfortable fit.
+</p>
+
+<div class="offer">
+🔥 LIMITED OFFER
+</div>
+
+</section>
+
+
+
+<!-- PRODUCT -->
+
+<section class="product">
+
+
+<div class="product-image">
+
+<div class="earbuds">
+🎧
+</div>
+
+</div>
+
+
+
+<h2>
+AirBass Pro X
+</h2>
+
+
+<div class="rating">
+★★★★★ 4.8/5
+</div>
+
+
+<p class="description">
+
+Crystal clear sound with powerful bass.
+Perfect for music, calls, gaming and everyday use.
+
+</p>
+
+
+
+<!-- FEATURES -->
+
+<div class="features">
+
+<div class="feature">
+
+<strong>🔋 30H</strong>
+
+<small>
+Battery Life
+</small>
+
+</div>
+
+
+<div class="feature">
+
+<strong>🎵 HD</strong>
+
+<small>
+Clear Sound
+</small>
+
+</div>
+
+
+<div class="feature">
+
+<strong>⚡ Fast</strong>
+
+<small>
+Charging
+</small>
+
+</div>
+
+
+<div class="feature">
+
+<strong>📱 BT 5.3</strong>
+
+<small>
+Bluetooth
+</small>
+
+</div>
+
+</div>
+
+
+
+<!-- PRICE -->
+
+<div class="price">
+
+<span class="old-price">
+149 SAR
+</span>
+
+<span class="new-price">
+99 SAR
+</span>
+
+</div>
+
+
+
+<!-- BUY -->
+
+<button
+class="buy-button"
+onclick="orderNow()">
+
+🛒 BUY NOW
+
+</button>
+
+
+</section>
+
+
+
+<!-- WHY US -->
+
+<section class="why">
+
+<h2>
+Why Choose Us?
+</h2>
+
+
+<div class="reason">
+
+<div class="reason-icon">
+🚚
+</div>
+
+<h3>
+Fast Delivery
+</h3>
+
+<p>
+Fast and convenient delivery.
+</p>
+
+</div>
+
+
+
+<div class="reason">
+
+<div class="reason-icon">
+💯
+</div>
+
+<h3>
+Quality Product
+</h3>
+
+<p>
+Reliable quality at a reasonable price.
+</p>
+
+</div>
+
+
+
+<div class="reason">
+
+<div class="reason-icon">
+💬
+</div>
+
+<h3>
+Easy WhatsApp Order
+</h3>
+
+<p>
+Order directly through WhatsApp.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h2>
+📞 Ready To Order?
+</h2>
+
+<p>
+Click below and send your order through WhatsApp.
+</p>
+
+
+<button
+class="whatsapp"
+onclick="orderNow()">
+
+💬 ORDER ON WHATSAPP
+
+</button>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Topu Earbuds Store
+
+</footer>
+
+
+
+<script>
+
+
+function orderNow(){
+
+    const number =
+    "966537644295";
+
+    const message =
+    "Hello, I want to order AirBass Pro X Earbuds. Price: 99 SAR.";
+
+    const url =
+    "https://wa.me/" +
+    number +
+    "?text=" +
+    encodeURIComponent(message);
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
